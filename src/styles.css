@@ -82,7 +82,7 @@ section{padding:92px 0;position:relative}
 /* ───────── stack ───────── */
 .stack{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
   border-radius:var(--radius);overflow:hidden}
-.srow{background:var(--bg);padding:22px 26px;display:grid;grid-template-columns:190px 1fr;
+.srow{background:var(--bg);padding:15px 22px;display:grid;grid-template-columns:190px 1fr;
   gap:20px;align-items:center;transition:background .25s}
 .srow:hover{background:var(--surface)}
 .srow .cat{color:var(--accent);font-family:var(--font-mono);font-size:.74rem;letter-spacing:1.4px;text-transform:uppercase}
@@ -94,13 +94,13 @@ section{padding:92px 0;position:relative}
 
 /* ───────── projects ───────── */
 .proj{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
-  padding:36px;margin-bottom:22px;transition:transform .28s,border-color .28s,box-shadow .28s}
+  padding:24px;margin-bottom:12px;transition:transform .28s,border-color .28s,box-shadow .28s}
 .proj:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 38%,var(--line));box-shadow:var(--shadow)}
 .proj-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
 .proj h3{font-family:var(--font-display);font-weight:400;font-size:1.65rem;letter-spacing:-.2px}
 .proj .tagline{color:var(--accent);font-size:.88rem;margin-top:4px}
 .proj p{color:var(--muted);margin-top:14px;max-width:72ch}
-.facts{display:flex;gap:34px;flex-wrap:wrap;margin:26px 0;padding:20px 0;
+.facts{display:flex;gap:24px;flex-wrap:wrap;margin:14px 0;padding:12px 0;
   border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fact b{display:block;font-family:var(--font-display);font-weight:400;font-size:2rem;
   color:var(--accent);line-height:1.1}
@@ -126,7 +126,7 @@ section{padding:92px 0;position:relative}
 
 /* ───────── timeline ───────── */
 .tl{border-left:1px solid var(--line);padding-left:32px;margin-left:6px}
-.item{position:relative;padding-bottom:40px}
+.item{position:relative;padding-bottom:18px}
 .item:last-child{padding-bottom:0}
 .item::before{content:"";position:absolute;left:-38px;top:8px;width:11px;height:11px;border-radius:50%;
   background:var(--line);border:2px solid var(--bg)}
@@ -139,11 +139,11 @@ section{padding:92px 0;position:relative}
 .item a:hover{text-decoration:underline}
 
 /* ───────── contact ───────── */
-.contact{border:1px solid var(--line);border-radius:26px;padding:62px 34px;text-align:center;
+.contact{border:1px solid var(--line);border-radius:26px;padding:32px 26px;text-align:center;
   background:radial-gradient(ellipse at top,color-mix(in srgb,var(--accent) 12%,var(--surface)),var(--surface))}
 .contact h2{font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,5vw,2.9rem)}
 .contact p{color:var(--muted);max-width:48ch;margin:16px auto 32px}
-footer{border-top:1px solid var(--line);padding:34px 0;margin-top:70px}
+footer{border-top:1px solid var(--line);padding:20px 0;margin-top:28px}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   color:var(--faint);font-size:.82rem}
 
@@ -161,7 +161,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;margin-top:70px}
 }
 
 /* ───────── figures ───────── */
-.fig{margin:28px 0 8px;padding:24px 20px 16px;border:1px solid var(--line);
+.fig{margin:18px 0 6px;padding:16px 14px 10px;border:1px solid var(--line);
   border-radius:14px;background:var(--surface-2);overflow-x:auto}
 .fig svg{display:block;min-width:620px}
 .fig figcaption{margin-top:14px;font-family:var(--font-mono);font-size:.68rem;
@@ -191,22 +191,22 @@ footer{border-top:1px solid var(--line);padding:34px 0;margin-top:70px}
 
 
 /* ───────── aire y motivo floral ───────── */
-section{padding:118px 0}
-.flower{display:flex;justify-content:center;color:var(--accent);opacity:.75;margin-bottom:26px}
+section{padding:40px 0}
+.flower{display:flex;justify-content:center;color:var(--accent);opacity:.75;margin-bottom:9px}
 .sechead{font-family:var(--font-display);font-weight:400;text-align:center;
-  font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.3px;margin-bottom:46px}
-.lead{font-size:1.09rem;line-height:1.8;max-width:56ch;margin-left:auto;margin-right:auto;text-align:center}
-.proj{padding:42px}
+  font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.3px;margin-bottom:20px}
+.lead{font-size:1.05rem;line-height:1.72;max-width:56ch;margin-left:auto;margin-right:auto;text-align:center}
+.proj{padding:24px}
 .proj p{max-width:62ch}
-@media(max-width:560px){section{padding:74px 0}}
+@media(max-width:560px){section{padding:30px 0}}
 
 
 /* ───────── hero minimalista ───────── */
-.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;
-  padding:60px 0 40px;position:relative}
+.hero{min-height:40vh;display:flex;flex-direction:column;justify-content:center;
+  padding:26px 0 26px;position:relative}
 .hero h1{font-size:clamp(3.2rem,11vw,7.5rem);line-height:.98;letter-spacing:-1.5px}
-.hero .eyebrow{margin-bottom:30px}
-.hero-sub{font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:32px;max-width:24ch;
+.hero .eyebrow{margin-bottom:12px}
+.hero-sub{font-size:clamp(1.1rem,2.4vw,1.45rem);margin-top:16px;max-width:26ch;
   color:var(--muted);line-height:1.5}
 .hero .pills,.hero .cta{display:none}
 .scroll{position:absolute;left:26px;bottom:34px;display:inline-flex;align-items:center;gap:10px;
