@@ -9,7 +9,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
-  <meta name="theme-color" content="#0A090C" />
+  <meta name="theme-color" content="#FFFAF4" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://isabh17.github.io/" />
@@ -25,15 +25,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <script>
     // evita el parpadeo blanco antes de que React monte
     try {
       var t = localStorage.getItem('theme');
-      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.dataset.theme = t;
-    } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+    } catch (e) { document.documentElement.dataset.theme = 'light'; }
   </script>
 </head>
 <body>
