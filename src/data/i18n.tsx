@@ -16,8 +16,8 @@ export const ui: Record<Lang, Ui> = {
     nav: { about: 'About', stack: 'Stack', work: 'Work', writing: 'Writing', experience: 'Experience', contact: 'Contact' },
     sections: { about: 'About', stack: 'What I work with', work: 'Selected work', writing: 'Beyond the code', experience: 'Experience' },
     hero: {
-      sub: 'Full stack developer. I build the interface, the API behind it and the database underneath.',
-      cta1: 'View my work →', cta2: 'Get in touch',
+      sub: 'I build web software. Mostly Python and SQL, some React.',
+      cta1: 'View my work', cta2: 'Get in touch',
     },
     contact: {
       title: 'Let’s talk',
@@ -33,8 +33,8 @@ export const ui: Record<Lang, Ui> = {
     nav: { about: 'Perfil', stack: 'Stack', work: 'Proyectos', writing: 'Más allá', experience: 'Experiencia', contact: 'Contacto' },
     sections: { about: 'Perfil', stack: 'Con qué trabajo', work: 'Proyectos', writing: 'Más allá del código', experience: 'Experiencia' },
     hero: {
-      sub: 'Desarrolladora full stack. Construyo la interfaz, la API que hay detrás y la base de datos debajo.',
-      cta1: 'Ver proyectos →', cta2: 'Escríbeme',
+      sub: 'Hago software web. Sobre todo Python y SQL, algo de React.',
+      cta1: 'Ver proyectos', cta2: 'Escríbeme',
     },
     contact: {
       title: 'Hablemos',

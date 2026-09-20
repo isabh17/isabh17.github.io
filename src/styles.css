@@ -199,3 +199,28 @@ section{padding:118px 0}
 .proj{padding:42px}
 .proj p{max-width:62ch}
 @media(max-width:560px){section{padding:74px 0}}
+
+
+/* ───────── hero minimalista ───────── */
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;
+  padding:60px 0 40px;position:relative}
+.hero h1{font-size:clamp(3.2rem,11vw,7.5rem);line-height:.98;letter-spacing:-1.5px}
+.hero .eyebrow{margin-bottom:30px}
+.hero-sub{font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:32px;max-width:24ch;
+  color:var(--muted);line-height:1.5}
+.hero .pills,.hero .cta{display:none}
+.scroll{position:absolute;left:26px;bottom:34px;display:inline-flex;align-items:center;gap:10px;
+  color:var(--muted);font-family:var(--font-mono);font-size:.72rem;letter-spacing:1.4px;
+  text-transform:uppercase;transition:color .25s}
+.scroll:hover{color:var(--accent)}
+.scroll svg{animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){.scroll svg{animation:none}}
+
+.metaband{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--surface);position:relative;z-index:2}
+.metaband .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  padding-top:18px;padding-bottom:18px;font-family:var(--font-mono);
+  font-size:.72rem;letter-spacing:1.1px;color:var(--faint);text-transform:uppercase}
+@media(max-width:700px){.metaband .wrap{flex-direction:column;gap:9px}
+  .scroll{left:24px;bottom:26px}}

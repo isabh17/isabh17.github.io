@@ -55,6 +55,14 @@ function Body() {
       <Nav theme={theme} onToggle={toggle} />
       <Hero />
 
+      <div className="metaband">
+        <div className="wrap">
+          <span>{c.meta.timezone}</span>
+          <span>{c.meta.languages}</span>
+          <span>{c.meta.specialty}</span>
+        </div>
+      </div>
+
       <Section id="about" title={t.sections.about}>
         {c.intro.map((x, i) => <p className="lead" key={i}>{x}</p>)}
         <p className="lead">{t.degreeLine(c.degree.degree, c.degree.school, c.degree.detail)}</p>
@@ -94,7 +102,7 @@ function Body() {
       <footer>
         <div className="wrap foot">
           <span>© {new Date().getFullYear()} Isabel Masaya</span>
-          <span>Guatemala · {profile.languages}</span>
+          <span>Guatemala · {c.meta.languages}</span>
         </div>
       </footer>
     </>

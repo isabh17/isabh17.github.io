@@ -8,7 +8,7 @@ export const profile = {
   timezone: 'GMT−6 · overlaps US Central',
   email: 'silverisa17@gmail.com',
   github: 'https://github.com/isabh17',
-  languages: 'Spanish (native) · English (C1)',
+  languages: 'Spanish (native) · English (intermediate)',
 }
 
 export const stackGroups = [
@@ -28,6 +28,7 @@ export const magazineLink = 'https://issuu.com/revistaecys/docs/vigesimaoctava-r
 
 type Copy = {
   available: string
+  meta: { timezone: string; languages: string; specialty: string }
   intro: string[]
   degree: { degree: string; school: string; detail: string }
   stackLabels: Record<string, string>
@@ -39,6 +40,7 @@ type Copy = {
 export const content: Record<Lang, Copy> = {
   en: {
     available: 'Open to remote',
+    meta: { timezone: 'GMT−6 · overlaps US Central', languages: 'Spanish (native) · English (intermediate)', specialty: 'databases · backend · frontend' },
     intro: [
       "I'm a full stack developer — I build the interface, the API behind it and the database underneath.",
       'Working across the stack means I can see where a problem actually starts: a slow screen is often a missing index, not a rendering issue. The data layer is where I go deepest — a badly designed schema doesn’t hurt on day one, it hurts six months later, in every query that drags.',
@@ -126,6 +128,7 @@ export const content: Record<Lang, Copy> = {
 
   es: {
     available: 'Disponible para remoto',
+    meta: { timezone: 'GMT−6 · coincide con el centro de EE. UU.', languages: 'Español (nativo) · Inglés (intermedio)', specialty: 'bases de datos · backend · frontend' },
     intro: [
       'Hago software web. Sobre todo Python y SQL, algo de React.',
       'Las bases de datos son la parte que de verdad me gusta. Casi siempre la pantalla lenta resulta ser un índice que falta.',

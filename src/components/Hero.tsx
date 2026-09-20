@@ -7,18 +7,16 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="wrap hero-in">
         <div className="mono eyebrow">{profile.location} · {c.available}</div>
-        <h1>Isabel<br /><span className="accent">Masaya</span></h1>
+        <h1>Isabel <span className="accent">Masaya</span></h1>
         <p className="hero-sub">{t.hero.sub}</p>
-        <div className="pills">
-          <span className="pill"><b>◆</b> {profile.timezone}</span>
-          <span className="pill"><b>◆</b> {profile.languages}</span>
-          <span className="pill"><b>◆</b> {profile.specialty}</span>
-        </div>
-        <div className="cta">
-          <a className="btn btn-1" href="#work">{t.hero.cta1}</a>
-          <a className="btn btn-2" href={`mailto:${profile.email}`}>{t.hero.cta2}</a>
-        </div>
       </div>
+      <a className="scroll" href="#work" aria-label={t.hero.cta1}>
+        <span>{t.hero.cta1}</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+          stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 4v15M6 13l6 6 6-6" />
+        </svg>
+      </a>
     </header>
   )
 }
