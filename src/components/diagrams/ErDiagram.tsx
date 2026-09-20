@@ -49,10 +49,6 @@ export default function ErDiagram() {
       <T x={742} y={62} name="tipo_cuenta" cols={['id_tipo', 'nombre']} />
       <T x={742} y={162} name="cliente" cols={['id_cliente', 'nombre', 'fk_tipo']} accent />
       <T x={742} y={276} name="historial" cols={['id_hist', 'descrip', 'tipo']} />
-
-      <text x="66" y="372" fontFamily="var(--font-mono)" fontSize="10" fill="var(--faint)">
-        8 of 13 entities · full model in the repository
-      </text>
     </svg>
   )
 }

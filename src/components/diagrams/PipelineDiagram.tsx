@@ -56,10 +56,6 @@ export default function PipelineDiagram() {
       <N x={674} y={160} label="MongoDB" sub="durable records" />
       <N x={764} y={4} label="Grafana" />
       <N x={764} y={228} label="Node + Vue" sub="Cloud Run" />
-
-      <text x="8" y="282" fontFamily="var(--font-mono)" fontSize="10" fill="var(--faint)">
-        all services containerized · deployed on Kubernetes
-      </text>
     </svg>
   )
 }

@@ -55,12 +55,12 @@ function Body() {
       <Nav theme={theme} onToggle={toggle} />
       <Hero />
 
-      <Section id="about" num="01" title={t.sections.about}>
+      <Section id="about" title={t.sections.about}>
         {c.intro.map((x, i) => <p className="lead" key={i}>{x}</p>)}
         <p className="lead">{t.degreeLine(c.degree.degree, c.degree.school, c.degree.detail)}</p>
       </Section>
 
-      <Section id="stack" num="02" title={t.sections.stack}>
+      <Section id="stack" title={t.sections.stack}>
         <div className="stack">
           {stackGroups.map(g => (
             <div className="srow" key={g.key}>
@@ -73,9 +73,9 @@ function Body() {
         </div>
       </Section>
 
-      <Section id="work" num="03" title={t.sections.work}><Projects /></Section>
-      <Section id="writing" num="04" title={t.sections.writing}><Magazine /></Section>
-      <Section id="experience" num="05" title={t.sections.experience}><Experience /></Section>
+      <Section id="work" title={t.sections.work}><Projects /></Section>
+      <Section id="writing" title={t.sections.writing}><Magazine /></Section>
+      <Section id="experience" title={t.sections.experience}><Experience /></Section>
 
       <section id="contact" className="rv">
         <div className="wrap">

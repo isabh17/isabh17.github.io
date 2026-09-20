@@ -27,10 +27,6 @@ export default function MlDiagram() {
       <Step x={228} n="2" title="Vectorize" sub="bag of words" />
       <Step x={448} n="3" title="Train" sub="dense Keras network" />
       <Step x={668} n="4" title="Ship" sub="TensorFlow.js · no server" />
-
-      <text x="8" y="178" fontFamily="var(--font-mono)" fontSize="10" fill="var(--faint)">
-        inference runs in the browser · nothing leaves the device
-      </text>
     </svg>
   )
 }
