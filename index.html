@@ -1,333 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isabel Masaya — Full Stack Developer</title>
+<meta name="description" content="Full stack developer based in Guatemala. Frontend, backend and relational database design. Open to remote roles.">
+<meta property="og:title" content="Isabel Masaya — Full Stack Developer">
+<meta property="og:description" content="Frontend, backend and relational databases. Based in Guatemala, open to remote roles.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink-900:#B04A72; --pink-700:#D96690; --pink-600:#EC7FA9; --pink-500:#F191B4;
+  --pink-400:#F5A3C0; --pink-300:#F9B8D0; --pink-200:#FCD3E1; --pink-100:#FFF0F5;
+  --ink:#3D2B33; --ink-soft:#6E5762; --line:#F2D9E4; --card:#FFFFFF; --bg:#FFFBFD;
+  --shadow:0 4px 24px rgba(236,127,169,.13);
+  --radius:20px; --max:1060px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,sans-serif;
+  font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.mono{font-family:Quicksand,system-ui,sans-serif}
+a{color:var(--pink-700);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
-  <title> Isabel Masaya Córdova| Personal CV</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta content='Masaya Córdova, María Isabel, Estudiante de Ingeniería en Ciencias y Sistemas, name='keywords'/>
-    <meta content='Masaya Córdova' name='author'/>
-    <link rel="shortcut icon" href="media/bg/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,251,253,.86);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{font-weight:700;font-family:Quicksand;font-size:1.06rem;color:var(--ink);letter-spacing:.2px}
+.brand span{color:var(--pink-600)}
+.navlinks{display:flex;gap:26px;flex-wrap:wrap}
+.navlinks a{color:var(--ink-soft);font-size:.93rem;font-weight:500}
+.navlinks a:hover{color:var(--pink-600);text-decoration:none}
+@media(max-width:700px){.navlinks{display:none}}
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+/* hero */
+header{padding:86px 0 70px;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;top:-180px;right:-140px;width:460px;height:460px;
+  background:radial-gradient(circle,var(--pink-200),transparent 68%);border-radius:50%;z-index:0}
+header .wrap{position:relative;z-index:1;display:flex;gap:52px;align-items:center;flex-wrap:wrap}
+.mono-badge{
+  width:132px;height:132px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--pink-300),var(--pink-600));
+  color:#fff;font-family:Quicksand;font-weight:700;font-size:2.7rem;letter-spacing:1px;
+  box-shadow:0 10px 32px rgba(236,127,169,.36)
+}
+.hero-txt{flex:1;min-width:280px}
+h1{font-size:clamp(2.1rem,5.2vw,3.15rem);line-height:1.13;font-weight:700;letter-spacing:-.6px}
+.role{color:var(--pink-700);font-weight:600;font-size:1.12rem;margin-top:10px;font-family:Quicksand}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.tag{background:var(--pink-100);color:var(--pink-900);border:1px solid var(--line);
+  padding:5px 13px;border-radius:999px;font-size:.81rem;font-weight:500}
+.cta{display:flex;gap:13px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 26px;border-radius:999px;font-weight:600;font-size:.94rem;font-family:Quicksand;
+  display:inline-block;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-1{background:var(--pink-600);color:#fff;box-shadow:0 6px 18px rgba(236,127,169,.4)}
+.btn-1:hover{box-shadow:0 10px 26px rgba(236,127,169,.5)}
+.btn-2{background:#fff;color:var(--pink-700);border:1.6px solid var(--pink-300)}
 
+/* sections */
+section{padding:66px 0}
+.eyebrow{display:flex;align-items:center;gap:11px;margin-bottom:26px}
+.eyebrow h2{font-size:1.52rem;font-weight:700;letter-spacing:-.3px}
+.eyebrow::after{content:"";flex:1;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--pink-300),transparent)}
+.lead{font-size:1.04rem;max-width:66ch;color:var(--ink-soft)}
+.lead strong{color:var(--ink);font-weight:600}
+.lead+.lead{margin-top:16px}
 
-    <!-- Global CSS
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
--->
-    <!-- <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.css"> -->
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:18px;margin-top:8px}
+.scard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow)}
+.scard h3{font-size:.79rem;text-transform:uppercase;letter-spacing:1.3px;
+  color:var(--pink-600);margin-bottom:14px;font-weight:700}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--pink-100);border:1px solid var(--line);color:var(--ink);
+  padding:6px 13px;border-radius:9px;font-size:.87rem;font-weight:500}
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+/* projects */
+.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px;box-shadow:var(--shadow);margin-bottom:22px;
+  transition:transform .22s,box-shadow .22s}
+.proj:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(236,127,169,.2)}
+.proj h3{font-size:1.24rem;font-weight:700;margin-bottom:10px}
+.proj p{color:var(--ink-soft);max-width:70ch}
+.proj p+p{margin-top:12px}
+.plinks{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}
+.plinks a{font-weight:600;font-size:.92rem;font-family:Quicksand}
+.facts{display:flex;gap:26px;flex-wrap:wrap;margin:20px 0 4px;
+  padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact b{display:block;font-family:Quicksand;font-size:1.42rem;color:var(--pink-600);font-weight:700;line-height:1.2}
+.fact span{font-size:.79rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.7px}
 
+/* timeline */
+.tl{border-left:2px solid var(--pink-200);padding-left:28px;margin-left:8px}
+.item{position:relative;padding-bottom:32px}
+.item:last-child{padding-bottom:0}
+.item::before{content:"";position:absolute;left:-36px;top:6px;width:13px;height:13px;
+  border-radius:50%;background:var(--pink-400);border:3px solid var(--bg)}
+.item.now::before{background:var(--pink-600);box-shadow:0 0 0 4px var(--pink-200)}
+.when{font-size:.81rem;color:var(--pink-700);font-weight:600;letter-spacing:.4px;font-family:Quicksand}
+.item h3{font-size:1.07rem;font-weight:600;margin:3px 0 2px}
+.where{font-size:.9rem;color:var(--ink-soft);font-style:italic}
+.item p{color:var(--ink-soft);font-size:.95rem;margin-top:8px;max-width:64ch}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--pink-100),#fff);
+  border:1px solid var(--line);border-radius:26px;padding:46px 34px;text-align:center;
+  box-shadow:var(--shadow)}
+.contact h2{font-size:1.72rem;margin-bottom:10px}
+.contact p{color:var(--ink-soft);max-width:48ch;margin:0 auto 26px}
+footer{padding:36px 0 46px;text-align:center;color:var(--ink-soft);font-size:.85rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .62s ease,transform .62s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+@media(max-width:560px){
+  section{padding:48px 0}
+  header{padding:56px 0 44px}
+  .facts{gap:18px}
+}
+</style>
 </head>
-
 <body>
-  <div class="wrapper">
-    <div class="main-wrapper">
-        <article class="resume-wrapper text-center position-relative">
-	<div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-        <header class="resume-header pt-4 pt-md-0">
-        <div class="media flex-column flex-md-row">
-        <img class="mr-3 img-fluid picture mx-auto" style="width: 15.4%;height: auto;" src="assets/images/laultima.png"  alt=>
-            <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-                <div class="primary-info">
-                    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Isabel Masaya</h1>
-                    <div class="title mb-3">Computer Science Student</div>
-                    <ul class="list-unstyled">
 
-                    <li><i class="fa fa-envelope" data-fa-transform="grow-3"></i> silverisa17@gmail.com</li>
-                    <li><br>
-                        <button style="background-color:#c98fdb; border-color: #f5c6cb;" type="button" class="btn btn-info" onclick="alert('+502 49303170')">Ver celular</button>
-                    </li>
-                    </ul>
-                </div><!--//primary-info-->
-                <div class="secondary-info ml-md-auto mt-2">
-                    <ul class="resume-social list-unstyled">
-
-                    <li class="mb-3"><a href=""><span class="fa-container text-center mr-2"><i class="fa fa-linkedin-square"></i></span>Linkedin</a></li>
-
-                    <li class="mb-3"><a href="https://github.com/isabh17"><span class="fa-container text-center mr-2"><i class="fa fa-github"></i></span>GitHub</a></li>
-
-                    <li class="mb-3"><a href="https://www.google.com/intl/es/gmail/about/"><span class="fa-container text-center mr-2"><i class="fa fa-user"></i></span>Gmail</a></li>
-
-
-                        </ul>
-                </div><!--//secondary-info-->
-
-            </div><!--//media-body-->
-        </div><!--//media-->
-    </header>
-		<div class="resume-body p-5">
-
-<section class="resume-section summary-section mb-5">
-    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Perfil</h2>
-    <div class="resume-section-content">
-        <p>Mi nombre es Isabel Masaya Córdova actualmente tengo 22 años de edad. Soy estudiante de Ingeniería en 
-        Ciencias y Sistemas en la universidad de San Carlos de Guatemala, me considero una persona 
-        creativa, con una excelente capacidad de resolución de problemas y con una gran habilidad
-        para trabajar bajo presión. También soy proactiva, confiable, me gusta aprender cosas nuevas y diferentes.
-        Estoy acostumbrada a trabajar por objetivos orientados en generar resultados, con excelente capacidad de 
-        organización y gestión de tiempo.
-           
-        <ul>
-
-            <li>Organizada, creativa y proactiva.</li>
-            <li>Apasionada en aprender nuevas cosas sobre la ciencia</li>
-
-        </ul>
-    </div>
-</section>
-			<div class="row">
-				<div class="col-lg-9">
-
-        <section class="resume-section education-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Educación</h2>
-            <div class="resume-section-content">
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">-Ingeniería en Ciencias y Sistemas</div>
-                        <div class="resume-degree-org">Universidad de San Carlos de Guatemala</div>
-                        <div class="resume-degree-time">2018 - Now</div>
-                    </li>
-        
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">-Bachiller en Ciencias en Letras</div>
-                        <div class="resume-degree-org">El Colegio Sagrado Corazón de Jesús zona 16</div>
-                        <div class="resume-degree-time">2013 - 2017</div>
-                    </li>
-
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">-Acreedora de English Proficiency Diploma, nivel C1</div>
-                        <div class="resume-degree-org">El Colegio Sagrado Corazón de Jesús zona 16</div>
-                        <div class="resume-degree-time">2017</div>
-                    </li>
-        
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">-Certificate of Achievement Dale Carnegie Training</div>
-                        <div class="resume-degree-org">El Colegio Sagrado Corazón de Jesús zona 16</div>
-                        <div class="resume-degree-time">2017</div>
-                    </li>
-        
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">-Pre-primaria - Primaria</div>
-                        <div class="resume-degree-org">Colegió Castillo de María</div>
-                        <div class="resume-degree-time">2004-2012</div>
-                    </li>
-                </ul>
-            </div>
-
-<section class="resume-section experience-section mb-3">
-        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Experiencia Laboral</h2>
-        <div class="resume-section-content">
-            <div class="resume-timeline position-relative">
-                <article class="resume-timeline-item position-relative pb-5">
-                    <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                            <h3 class="resume-position-title font-weight-bold mb-1">Secretaria</h3>
-                            <div class="resume-company-name ml-auto">Joyería y Relojería EL BRILLANTE</div>
-                        </div><!--//row-->
-                        <div class="resume-position-time">2021-Now</div>
-                    </div><!--//resume-timeline-item-header-->
-                    <div class="resume-timeline-item-desc">
-                        <p></p>
-                        <ul>
-                            <li>Gestión de la agenda y coordinación de ventas.</li>
-                            <li>Redacción de correspondencia compleja, informes y otra documentación.</li>
-                            <li>Atención de llamadas telefónicas y mensajes.</li>
-                            <li>Realización de publicidad.</li>
-                            <li>Manejo de redes sociales.</li>
-                        </ul>
-                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Tecnologías Usadas:</h4>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><span class="badge badge-primary badge-pill">Microsoft Office</span></li>
-                            <li class="list-inline-item"><span class="badge badge-primary badge-pill">Adobe Photoshop</span></li>
-                        </ul>
-                    </div><!--//resume-timeline-item-desc-->
-
-                </article><!--//resume-timeline-item-->
-
-                <article class="resume-timeline-item position-relative pb-5">
-                    <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                            <h3 class="resume-position-title font-weight-bold mb-1">Maestra</h3>
-                        </div><!--//row-->
-                        <div class="resume-position-time">2020</div>
-                    </div><!--//resume-timeline-item-header-->
-                    <div class="resume-timeline-item-desc">
-                        <p></p>
-                        <ul>
-                            <li>Enseñanza de matemáticas a nivel primaria y básicos.</li>
-                            <li>Enseñanza de aritmética, algébra y trigonometría.</li>
-                        </ul>
-                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Tecnologías Usadas:</h4>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><span class="badge badge-primary badge-pill">Microsoft Office</span></li>
-                        </ul>
-                    </div><!--//resume-timeline-item-desc-->
-
-                </article><!--//resume-timeline-item-->
-               
-            </div><!--//resume-timeline-->
-        </div>
-    </section><!--//experience-section-->
-				</div>
-				<div class="col-lg-3">
-
-<section class="resume-section skills-section mb-5">
-        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Habilidades y Herramientas</h2>
-        <div class="resume-section-content">
-            <div class="resume-skill-item">
-                <h4 class="resume-skills-cat font-weight-bold"></h4>
-                <ul class="list-unstyled mb-4">
-                    
-                    <li class="mb-2">
-                        <div class="resume-skill-name">Python</div>
-                        <div class="progress resume-progress">
-                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    
-                    <li class="mb-2">
-                        <div class="resume-skill-name">HTML/CSS</div>
-                        <div class="progress resume-progress">
-                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    
-                    <li class="mb-2">
-                        <div class="resume-skill-name">Java</div>
-                        <div class="progress resume-progress">
-                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-
-                    <li class="mb-2">
-                        <div class="resume-skill-name">C#</div>
-                        <div class="progress resume-progress">
-                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-
-                    <li class="mb-2">
-                        <div class="resume-skill-name">Javascript</div>
-                        <div class="progress resume-progress">
-                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-               
-                </ul>
-            </div><!--//resume-skill-item-->
-
-            <div class="resume-skill-item">
-                <h4 class="resume-skills-cat font-weight-bold">Otros</h4>
-                <ul class="list-inline">
-
-                    <li class="list-inline-item"><span class="badge badge-light">LaTeX</span></li>
-
-                    <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
-
-                    <li class="list-inline-item"><span class="badge badge-light">Microsoft Office</span></li>
-
-                    <li class="list-inline-item"><span class="badge badge-light">Adobe Photoshop</span></li>
-
-                </ul>
-            </div><!--//resume-skill-item-->
-        </div><!--resume-section-content-->
-    </section><!--//skills-section-->
-
-<section class="resume-section language-section mb-5">
-    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Idiomas</h2>
-    <div class="resume-section-content">
-        <ul class="list-unstyled resume-lang-list">
-
-            <li class="mb-2"><span class="resume-lang-name font-weight-bold">Español</span> <small class="text-muted font-weight-normal">(Nativo)</small></li>
-
-            <li class="mb-2"><span class="resume-lang-name font-weight-bold">Inglés</span> <small class="text-muted font-weight-normal">(C1)</small></li>
-
-            <li class="mb-2"><span class="resume-lang-name font-weight-bold">Alemán</span> <small class="text-muted font-weight-normal">(Principiante)</small></li>
-
-        </ul>
-    </div>
-</section><!--//language-section-->
-
-
-<section class="resume-section interests-section mb-5">
-    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Habilidades</h2>
-    <div class="resume-section-content">
-        <ul class="list-unstyled">
-
-            <li class="mb-1">-Trabajo en equipo</li>
-            <li class="mb-1">-Gestión de estrés</li>
-            <li class="mb-1">-Comunicación</li>
-            <li class="mb-1">-Organización</li>
-            <li class="mb-1">-Resolución de Problemas</li>
-
-        </ul>
-    </div>
-</section><!--//interests-section-->
-				</div>
-			</div><!--//row-->
-			<div class="row">
-					<div class="col-lg-7">
-
-<section class="resume-section reference-section mb-3">
-    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Contactáme</h2>
-    <div class="resume-section-content">
-        <ul class="list-unstyled resume-awards-list">
-
-            <li class="mb-2 pl-4 position-relative">
-                <i class="resume-award-icon fa-newspaper fas position-absolute" data-fa-transform="shrink-2"></i>
-                <div class="resume-award-name"><a href="">-Número de Celular</a>, 49303170</div>
-
-                <div class="resume-award-desc"></div>
-            </li>
-
-            <li class="mb-2 pl-4 position-relative">
-                <i class="resume-award-icon fa-newspaper fas position-absolute" data-fa-transform="shrink-2"></i>
-                <div class="resume-award-name"><a href="">-Correo Eléctronico</a>, silverisa17@gmail.com</div>
-
-                <div class="resume-award-desc"></div>
-            </li>
-
-            <li class="mb-2 pl-4 position-relative">
-                <i class="resume-award-icon fa-newspaper fas position-absolute" data-fa-transform="shrink-2"></i>
-                <div class="resume-award-name"><a href="">-Dirección</a>, 3 calle 18-60 zona 16</div>
-
-                <div class="resume-award-desc"></div>
-            </li>
-            <br><br/>
-            <button style="background-color:#ffc0cb; border-color: #f5c6cb; border-radius:10px;" onclick="location.href='https://drive.google.com/file/d/1jea8ElmDNLSslB6rMX5-NQOqjL-HdZro/view?usp=sharing';">Presionar aquí</button>
-
-
-        </ul>
-    </div>
-</section><!--//awards-section-->
-					</div>
-					<div class="col-lg-4">
-
-<section class="resume-section reference-section mb-3">
-</section><!--//awards-section-->
-					</div>
-				</div><!--//row-->
-		</div><!--//resume-body-->
-	</div>
-</article>
-
+<nav>
+  <div class="wrap">
+    <div class="brand">Isabel <span>Masaya</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
+</nav>
 
-  <footer class="footer text-center pt-2 pb-5">
-	  <small class="copyright">Diseñado<i class="fa fa-heart"></i> por<a href="" target="_blank"> Isabel Córdova</a></small>
-	  <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-	  <div class="wrapper">
-	</div>
-  </footer>
+<header>
+  <div class="wrap">
+    <div class="mono-badge">IM</div>
+    <div class="hero-txt">
+      <h1>Isabel Masaya</h1>
+      <div class="role">Full Stack Developer &middot; databases, backend, frontend</div>
+      <div class="tags">
+        <span class="tag">📍 Guatemala</span>
+        <span class="tag">GMT−6 · overlaps US Central</span>
+        <span class="tag">Open to remote</span>
+        <span class="tag">English C1 · Spanish native</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-1" href="#work">View my work</a>
+        <a class="btn btn-2" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
 
+<section id="about" class="rv">
+  <div class="wrap">
+    <div class="eyebrow"><h2>About</h2></div>
+    <p class="lead">I'm a <strong>full stack developer</strong> — I build the interface,
+    the API behind it and the database underneath. Currently on a backend/DBA team,
+    doing web software development: schema design, query tuning and production data.</p>
+    <p class="lead">What I enjoy most is the modeling: understanding the problem
+    properly before creating a single table. A badly designed schema doesn't hurt on
+    day one — it hurts six months later, in every query that drags.</p>
+    <p class="lead">I studied <strong>Computer Science and Systems Engineering</strong>
+    at Universidad de San Carlos de Guatemala, completing coursework in 2025.</p>
+  </div>
+</section>
+
+<section id="stack" class="rv">
+  <div class="wrap">
+    <div class="eyebrow"><h2>What I work with</h2></div>
+    <div class="stack">
+      <div class="scard">
+        <h3>Databases</h3>
+        <div class="chips">
+          <span class="chip">MySQL</span><span class="chip">Oracle</span>
+          <span class="chip">PL/SQL</span><span class="chip">Schema design</span>
+          <span class="chip">Query tuning</span>
+        </div>
+      </div>
+      <div class="scard">
+        <h3>Backend</h3>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">Go</span><span class="chip">Flask</span>
+          <span class="chip">REST APIs</span><span class="chip">Git</span>
+        </div>
+      </div>
+      <div class="scard">
+        <h3>Infrastructure</h3>
+        <div class="chips">
+          <span class="chip">Kubernetes</span><span class="chip">Docker</span>
+          <span class="chip">Kafka</span><span class="chip">Redis</span>
+          <span class="chip">MongoDB</span><span class="chip">gRPC</span>
+        </div>
+      </div>
+      <div class="scard">
+        <h3>Frontend &amp; more</h3>
+        <div class="chips">
+          <span class="chip">React</span><span class="chip">JavaScript</span>
+          <span class="chip">HTML / CSS</span><span class="chip">TensorFlow</span><span class="chip">R / RStudio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="rv">
+  <div class="wrap">
+    <div class="eyebrow"><h2>Selected projects</h2></div>
+
+    <div class="proj">
+      <h3>Relational databases in Oracle</h3>
+      <p>Two systems taken from conceptual model to a working implementation. Neither
+      is a syntax exercise: both required deciding how to split entities, where the
+      constraints belong, and which logic deserves to live inside the engine.</p>
+      <div class="facts">
+        <div class="fact"><b>20</b><span>tables</span></div>
+        <div class="fact"><b>10</b><span>stored procedures</span></div>
+        <div class="fact"><b>25</b><span>business queries</span></div>
+        <div class="fact"><b>20k</b><span>records loaded</span></div>
+      </div>
+      <p>The <strong>commerce system</strong> loads six CSV files through a staging
+      table, distributing rows to final tables in foreign-key order, and exposes a
+      Flask REST API.</p>
+      <p>The <strong>banking system</strong> keeps transactional logic inside the
+      database: ten stored procedures, plus an <code>_audit</code> trigger on every
+      table that builds a complete trail of who changed what and when.</p>
+      <div class="plinks">
+        <a href="https://github.com/isabh17/bases-de-datos-oracle">→ View repository</a>
+      </div>
+    </div>
+
+    <div class="proj">
+      <h3>Distributed voting system on Kubernetes</h3>
+      <p>A system that ingests a high-volume stream of votes, queues it, persists it
+      to two different stores and visualizes it in real time — deployed as
+      microservices on Kubernetes. The point was never the voting: it was what
+      happens when thousands of requests arrive at once and nothing is allowed to
+      be lost.</p>
+      <div class="facts">
+        <div class="fact"><b>6</b><span>containerized services</span></div>
+        <div class="fact"><b>15</b><span>k8s manifests</span></div>
+        <div class="fact"><b>2</b><span>data stores</span></div>
+      </div>
+      <p><strong>Why Kafka in the middle.</strong> Writing straight from the gRPC
+      server to the databases caps ingestion at the speed of the slowest write. The
+      queue decouples them, so the server only publishes and the consumer drains at
+      its own pace without losing votes during a spike.</p>
+      <p><strong>Why two stores.</strong> Redis holds the live counters the dashboards
+      poll constantly; MongoDB keeps the durable record the API queries later.</p>
+      <div class="plinks">
+        <a href="https://github.com/isabh17/distributed-voting-system">→ View repository</a>
+      </div>
+    </div>
+
+    <div class="proj">
+      <h3>A chatbot that runs in the browser</h3>
+      <p>A neural network trained with Keras that classifies intents from natural
+      language, then converted to TensorFlow.js.</p>
+      <div class="facts">
+        <div class="fact"><b>784</b><span>intents</span></div>
+        <div class="fact"><b>2,075</b><span>training patterns</span></div>
+        <div class="fact"><b>0</b><span>servers needed</span></div>
+      </div>
+      <p>NLTK handles tokenization and lemmatization, a dense Keras network does the
+      classification, and the trained model is exported to TensorFlow.js. <strong>There
+      is no backend</strong> — the browser downloads the weights and runs inference
+      locally, which is why the live demo works on a static host.</p>
+      <div class="plinks">
+        <a href="https://github.com/isabh17/IA1_Proyecto_17.github.io">→ View repository</a>
+        <a href="https://isabh17.github.io/IA1_Proyecto_17.github.io/">✨ Try the live demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="rv">
+  <div class="wrap">
+    <div class="eyebrow"><h2>Experience</h2></div>
+    <div class="tl">
+      <div class="item now">
+        <div class="when">2024 — Present</div>
+        <h3>Full Stack Developer</h3>
+        <div class="where">Health technology company</div>
+        <p>Web software development on a backend/DBA team: relational schema design,
+        query tuning and production data support.</p>
+      </div>
+      <div class="item">
+        <div class="when">2026</div>
+        <h3>Design &amp; Layout</h3>
+        <div class="where">Revista ECYS — Universidad de San Carlos de Guatemala</div>
+        <p>Designed and laid out the digital magazine of the School of Computer Science
+        and Systems, produced in <strong>R / RStudio</strong> — a reproducible
+        publishing pipeline rather than a manual layout tool. <a href="https://issuu.com/revistaecys/docs/vigesimaoctava-revistadigital">Read the published edition →</a></p>
+      </div>
+      <div class="item">
+        <div class="when">2021 — 2024</div>
+        <h3>Administrative Assistant</h3>
+        <div class="where">Joyería y Relojería El Brillante</div>
+        <p>Scheduling, sales coordination, reporting and documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="rv">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to full stack, backend and database roles — remote or based
+      in Guatemala.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-1" href="mailto:silverisa17@gmail.com">silverisa17@gmail.com</a>
+        <a class="btn btn-2" href="https://github.com/isabh17">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Isabel Masaya · Guatemala</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
 </body>
-
 </html>
