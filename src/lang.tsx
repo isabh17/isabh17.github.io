@@ -14,7 +14,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
       const saved = localStorage.getItem('lang')
       if (saved === 'en' || saved === 'es') return saved
     } catch { /* private mode */ }
-    return navigator.language?.toLowerCase().startsWith('es') ? 'es' : 'en'
+    return 'es'
   })
 
   useEffect(() => {

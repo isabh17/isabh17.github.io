@@ -2,13 +2,17 @@ import { profile } from '../data/content'
 import { useLang } from '../lang'
 
 export default function Hero() {
-  const { t, c } = useLang()
+  const { lang, t, c } = useLang()
   return (
     <header className="hero" id="top">
       <div className="wrap hero-in">
         <div className="mono eyebrow">{profile.location} · {c.available}</div>
         <h1>Isabel <span className="accent">Masaya</span></h1>
         <p className="hero-sub">{t.hero.sub}</p>
+        <div className="hero-cta">
+          <a className="btn btn-1" href={`/cv-${lang}.pdf`} download>{t.cv}</a>
+          <a className="btn btn-2" href={`mailto:${profile.email}`}>{t.hero.cta2}</a>
+        </div>
       </div>
       <a className="scroll" href="#work" aria-label={t.hero.cta1}>
         <span>{t.hero.cta1}</span>

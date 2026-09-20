@@ -238,3 +238,6 @@ h1 .accent{font-style:normal}
 .hero::before{background:radial-gradient(circle,color-mix(in srgb,var(--accent-2) 60%,transparent),transparent 68%)}
 .metaband{background:var(--surface-2);border-color:var(--line)}
 .fig{background:var(--surface-2);border-color:var(--line)}
+
+.hero-cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:560px){.hero-cta .btn{padding:11px 20px;font-size:.88rem}}
