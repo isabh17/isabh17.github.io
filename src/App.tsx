@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useTheme, useReveal } from './hooks'
+import { useTheme, useReveal, usePointerGlow } from './hooks'
 import { LangProvider, useLang } from './lang'
 import { profile, stackGroups } from './data/content'
 import Nav from './components/Nav'
@@ -47,6 +47,7 @@ function Body() {
   const { theme, toggle } = useTheme()
   const { lang, t, c } = useLang()
   useReveal()
+  usePointerGlow()
 
   return (
     <>
@@ -70,8 +71,8 @@ function Body() {
 
       <Section id="stack" title={t.sections.stack}>
         <div className="stack">
-          {stackGroups.map(g => (
-            <div className="srow" key={g.key}>
+          {stackGroups.map((g, i) => (
+            <div className="srow" key={g.key} style={{ transitionDelay: `${i * 70}ms` }}>
               <div className="cat">{c.stackLabels[g.key]}</div>
               <div className="chips">
                 {g.items.map(i => <span className="chip" key={i}>{i}</span>)}

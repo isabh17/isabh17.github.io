@@ -1,5 +1,6 @@
 import { repos } from '../data/content'
 import { useLang } from '../lang'
+import Fact from './Fact'
 import ErDiagram from './diagrams/ErDiagram'
 import PipelineDiagram from './diagrams/PipelineDiagram'
 import MlDiagram from './diagrams/MlDiagram'
@@ -14,10 +15,10 @@ export default function Projects() {
   const { lang, t, c } = useLang()
   return (
     <>
-      {c.projects.map(p => {
+      {c.projects.map((p, i) => {
         const fig = figures[p.id]
         return (
-          <article className="proj" key={p.id}>
+          <article className="proj rv" key={p.id} style={{ transitionDelay: `${i * 90}ms` }}>
             <h3>{p.title}</h3>
             <div className="tagline">{p.tagline}</div>
             {fig && (
@@ -28,11 +29,9 @@ export default function Projects() {
             )}
             {p.body.map((x, i) => <p key={i}>{x}</p>)}
             <div className="facts">
-              {p.facts.map(f => (
-                <div className="fact" key={f.label}><b>{f.value}</b><span>{f.label}</span></div>
-              ))}
+              {p.facts.map(f => <Fact key={f.label} value={f.value} label={f.label} />)}
             </div>
-            <div className="tags">{p.tags.map(x => <span className="tag" key={x}>{x}</span>)}</div>
+            <div className="tags">{p.tags.map((x, k) => <span className="tag" key={x} style={{ transitionDelay: `${k * 45}ms` }}>{x}</span>)}</div>
             <div className="plinks">
               <a href={repos[p.id]} target="_blank" rel="noreferrer">{t.repo}</a>
             </div>
